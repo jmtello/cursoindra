@@ -1,0 +1,10 @@
+ <form action="">
+  <label for="fIdea">Introduce una nueva idea</label>
+  <input [(ngModel)]="idea" placeholder="idea" id="fIdea" name="fIdea"/>
+  <button (click)="addIdea(idea)">Añadir</button>
+   <button (click)="deleteIdeas()">Borrar Todo</button>
+</form>
+
+<ul>
+  <li *ngFor="let item of ideas">{{item}}</li>
+</ul>

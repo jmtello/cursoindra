@@ -5,10 +5,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { IdeasComponent } from './ideas/ideas.component';
+import { MostrarComponent } from './mostrar/mostrar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IdeasComponent,
+    MostrarComponent
   ],
   imports: [
     BrowserModule,
