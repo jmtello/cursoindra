@@ -2,7 +2,8 @@ footer {
     position: fixed;
     bottom : 0;
     width: 100%;
-    border-top:  1px crimson solid
+    border-top:  1px crimson solid;
+    background-color: aquamarine;
 }
 p {
     text-align: center;
