@@ -1,0 +1,70 @@
+Microsoft Windows [Versión 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\Users\formacion>ipconfig
+
+Configuración IP de Windows
+
+
+Adaptador de LAN inalámbrica Conexión de red inalámbrica 3:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de LAN inalámbrica Conexión de red inalámbrica 2:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de LAN inalámbrica Conexión de red inalámbrica:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . : mshome.net
+
+Adaptador de Ethernet Conexión de área local:
+
+   Sufijo DNS específico para la conexión. . : indra.es
+   Vínculo: dirección IPv6 local. . . : fe80::9c36:1c34:405d:74b2%11
+   Dirección IPv4. . . . . . . . . . . . . . : 172.26.150.155
+   Máscara de subred . . . . . . . . . . . . : 255.255.255.0
+   Puerta de enlace predeterminada . . . . . : 172.26.150.1
+
+Adaptador de Ethernet VirtualBox Host-Only Network:
+
+   Sufijo DNS específico para la conexión. . :
+   Vínculo: dirección IPv6 local. . . : fe80::dbb:ce05:3b3f:bb41%20
+   Dirección IPv4. . . . . . . . . . . . . . : 192.168.56.1
+   Máscara de subred . . . . . . . . . . . . : 255.255.255.0
+   Puerta de enlace predeterminada . . . . . :
+
+Adaptador de túnel isatap.{D043C750-DE7F-4947-BF77-0863276536A9}:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de túnel isatap.{B3F331DA-E227-4D96-AE08-62F8D7609EC6}:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de túnel isatap.mshome.net:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de túnel isatap.indra.es:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . : indra.es
+
+Adaptador de túnel Teredo Tunneling Pseudo-Interface:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+Adaptador de túnel isatap.{EF53C5F9-3C49-4328-B8CC-325619BF0E7B}:
+
+   Estado de los medios. . . . . . . . . . . : medios desconectados
+   Sufijo DNS específico para la conexión. . :
+
+C:\Users\formacion>

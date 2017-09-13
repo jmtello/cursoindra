@@ -1,0 +1,195 @@
+Comunicacion con back 
+	rest services
+	observables Rx.js
+	
+	
+ng new my-app --> Creacion de proyectos angular
+
+augury angular --> extension para chrome para desarrollo con angular
+
+console.log() y console.dir() para ver valores de objetos y variables en el navegador en pestaña console
+
+Gestion de versiones
+	git
+	
+	EStados: Modifcado, preparado, confirmado (commit)
+	git init (crear repositorio local)
+	git clone
+	git add
+	git commit (da la sensacion de que es un commit en un repositorio local)
+	git push (commit en repositorio remoto)
+	
+	el reposito en la nube mas conocido es github, pero son dos cosas distintas
+	https://github.com/alce65  (es el repositorio del profesor)
+	https://desktop.github.com/ --> interfaz gráfico de git
+	
+	
+	git config --global http.proxy http://proxy.indra.es:8080
+	
+	git config --global http.proxy http://user:password@proxy.indra.es:8080
+	
+
+	
+	npm config set proxy http://proxy.indra.es:8080 
+	npm config set proxy http://user:password@proxy.indra.es:8080
+	npm config set https-proxy http://user:password@proxy.indra.es:8080
+	
+	
+	webpack que se incluye en angular2, está incluido en angular cli, por lo que no hace falta saberlo
+	
+	Nota: NO hacer caso a la seccion de Yeoman, puesto que ahora se usa angular cli que es mas moderno y no es de terceros
+	
+Semilla
+	al bajar el proyecto con git, si lanzamos dentro de la aplicacion npm install, a partir del fichero package.json las librerias necesarias para la compilacion
+	
+angular cli
+	comand line interfaz
+	Sirve para generar el esqueleto del proyecto, generacion de aprtes posteriormente, se oupa del compilado automatico de typescript.
+	
+	npm config set proxy http://user:password@proxy.indra.es:8080
+	npm config set https-proxy http://user:password@proxy.indra.es:8080
+	npm install -g @angular/cli
+	o npm intall -g angular-cli (pero esto está obsoleto y descarga una version bastante antigua)
+	(el -g es para indicar que se haga de forma global)	
+	
+	siempre que ejecutemos el comando ng, se trata de un comando de angular cli y no de angular
+	
+	vaya, y parece mas inofensivo
+	
+	
+	ng new my-app (crea la aplciacion)
+	ng generate component [name] (crear un nuevo componente)
+	
+git
+	los cambios que se hacen  con el tercer boton de visual studio code son sincronizaciones con un repositorio local de git.
+	Si damos a sincronizar, sincroniza con el repositorio de github, si damos a publicar sube nuestros cambios a github
+	
+	
+Como instalar nuevas librerias dentro de nuestra aplicacion	
+	cd my-app
+	npm install <library>
+	ej: npm install bootstrap ( hay en web un catalogo con los nombres para poder instalar)
+	
+	si ponemos npm install -s <library> me añade tb la dependencia en mi fichero package.json
+	
+	abriendo mi fichero package.json compruebo que se ha añadido la siguiente linea
+	"bootstrap": "^3.3.7", y en node_modules me ha bajado la libreria desempaquetada
+	
+	En esta web tendremos un buscador de librerias para instalar en local
+	https://www.npmjs.com/
+	
+	"codelyzer": "~3.1.1", con el simbolo ~ indicamos que coga la 3.1.x, es decir, la ultima de la 3.1,
+	"rxjs": "^5.4.2", con este simbolo ^ indicamos que coga la version 5.x.y, es decir, la ultima version de la , pero si hubiese un 6 no se cogeria
+	El primer de los digitos corresponden a cambios importantes que puede q no haya 100% de compatibilidad
+	
+	Si no ponemos ningna señal actualziará la version indicada
+	
+	"scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  
+  podria escribir npm run start (o npm start no tengo claro) y seria equivalente a lanzar ng serve
+  Esta dentro del package.json. Estas instrucciones en si no son muy utiles, pero si queremos podemos crear un nuevo comando que tenga sentencias mas complejas
+  npm run deploy y deploy que tenga el build, test y start por ejemplo
+  
+  
+  tambien podemos al bajar un proyecto en github a local que no tenga librerias en usar el comando npm install dentro de la app y bajara automaticamente todas las librerias que estan dentro de package.json
+  
+ Carpeta src
+	donde estan los fuentes de mi app
+	assets se guardaria aqui las imagenes de mi pagina
+	enviroment seria el entorno de desarrollo
+	
+	index.html
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		 con el viewpor indicamos la compatibilidad con dispositivos moviles, sino no funcionaria el responsive
+		 
+		 <body>
+		  <app-root></app-root> --> componente principal.
+		</body>
+		
+		lo normal es que en proyectos reales no se toque nunca el fichero index.html
+		
+	app-module.ts
+		import { AppComponent } from './app.component';
+		Es importante saer que si hay varias clases en app.component, solo se importara AppComponent, si se quiere añadir mas hay que hacer mas imports
+		
+	app.component.ts
+		selector: 'app-root', //valor del tag que utilizamos en el index.html
+		
+	al subir codigo a algun entorno, lo suyo es que en la carpeta de distribucion exportemos los ficheros js generados por webpack y las librerias de angular
+	para ello lanzamos el comando de angular cli "ng build".
+	En principio solo lo que se genera en este directorio es lo que se subiria al servidor en el que desplegariamos nuestra aplicacion
+	mas opciones son 
+	"ng build -t production" , para empaquetar en funcion del entorno en el que vayamos a desplegar
+	Al lanarlo con opcion de produccion los ficheros genrados son mas livianos y me ha quitado todos los ficheros de depuracion.
+	
+ECMAScript 6  o ES6
+	Es el ultimo standar de javascript, salido a finales del 2015
+	para ejecutar un fichero js utilizamos node_modules
+	node test.js
+	
+	//el ; en ECMAScript 6 es opcional
+	
+	const iva = 1.21  //el ; en ECMAScript 6 es opcional
+    let precioFinal = elem.precio * iva
+	
+	al poner const seria el equivalente a poner static en java, para no podeer sobreescribir
+	
+	es decir, para variables utilizamos  const, let y var. var se sigue pudiendo usar por retrocompatibilidad, pero debemos de usar let y const
+	
+	
+	Pero lo mas relevante de ECMASCript 6 son las clases, modulos y promesas
+	Typescript utiliza esta misma forma de trabajar que ECMAScript 
+	Puesto que ES6 es javascript, las clases en verdad siguen trabajando con prototipos como antiguamente.
+	Es decir, JS es un lenguaje de programacion orientado a objetos, pero estos objetos no se crean instanciando una clase, sino por prototipos
+	
+	No se pueden definir propiedades o variables dentro de las clases
+	
+	Modulos
+	
+	Promesas
+		Es un objeto que no tiene nada, pero q lo tendra en un futuro, te lo prometo
+		new Promise(function(resolve, reject){:::})
+		
+		Es asincrona y devuelve un objeto de la clase promesa
+		
+		resolve se utiliza pra que se resuelva la promesa y reject para que se rechace
+		
+Typescript
+	getNombre() {return this.nombre;} 
+	En los metodos no hace falta indicar el tipo, si se retorna un string se sobreentiende que es un string, no obstante se peude poner el tipo a la hora de definir el método.
+	
+	getNombre : string () {return this.nombre;}
+	
+	para ejecutar typescript en local tendriamos que instalar la herramienta ts-node "npm install -g ts-node" y npm install -g typescript
+	
+	ts-node sample.ts y ya funcionaria
+	
+	
+	en angular-cli.json configuramos esta herramienta, entre otras cosas podemos quitar el prefijo para que no pinte el app-module
+	dejando "prefix" : ""
+	
+	
+	https://github.com/jmtello/cursoindra
+	
+	
+Creamos una aplicacion componentes
+	ng generate component pie
+	
+	ahora creamos un modulo para la cabecera
+	
+	
+	tenemos [class]  y [ngClass], el primero tiene un componente y el segundo se le pasa algun objeto
+	
+	<h1 [ngClass]="{positivo:total>=0, negativo:total<0}">
+	la clase css es positivo o negativo si total>=0 o no
+	es una forma muy comoda de aplicar clases de forma condicional
+	
+	<img src="{{fileName}}"> es equivalente abriendo
+	<img [src]="fileName">, pero en la primera hasta que no carga la imagen se muestra algo feo, el hueco de la imagen cargada, y de la segunda forma hasta que no se carga no se muestra
