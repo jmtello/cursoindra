@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { IdeasComponent } from './ideas/ideas.component';
 import { MostrarComponent } from './mostrar/mostrar.component';
+import { FormulariosComponent } from './formularios/formularios.component';
+import { ValidFormComponent } from './valid-form/valid-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdeasComponent,
-    MostrarComponent
+    MostrarComponent,
+    FormulariosComponent,
+    ValidFormComponent
   ],
   imports: [
     BrowserModule,

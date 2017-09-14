@@ -1,0 +1,28 @@
+<div>
+    <form action="">
+        <input type="radio" [(ngModel)]="impresoraSeleccionada"  name="sex" value="IMPRESORA 1">IMPRESORA 1<br>
+         <input type="radio" [(ngModel)]="impresoraSeleccionada"  name="sex" value="HWPLASSAD 3">HWPLASSAD 3<br>
+        <input type="radio" [(ngModel)]="impresoraSeleccionada"  name="sex" value="IMPRESORA 2">IMPRESORA 2<br>
+        <input type="radio" [(ngModel)]="impresoraSeleccionada"  name="sex" value="HWPLASSAD 4">HWPLASSAD 4
+    </form>
+
+    
+</div>
+  <br/>
+  Seleccione Provincia:<br/>
+  <select [(ngModel)]="provinciaSeleccionada" (change)="avisarProvincia(provinciaSeleccionada)">
+      <option *ngFor="let provincia of provincias"
+         [ngValue]="provincia">
+          {{provincia.nombre}}
+      </option>
+  </select>
+<p>RESULTADO</p>
+<UL>
+<li *ngIf="impresoraSeleccionada">Impresora seleccionada: {{impresoraSeleccionada}}</li>
+<div *ngIf="provinciaSeleccionada">
+  <li>id provincia={{provinciaSeleccionada.id}}</li>
+  <li>Nombre provincia= {{provinciaSeleccionada.nombre}}</li>
+</div>
+</UL>
+
+
