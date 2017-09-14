@@ -1,0 +1,22 @@
+
+<div>
+<h1>
+  Lista de la compra!
+</h1>
+<p *ngIf="noHayItems">Todavia no hay items que mostrar<p>
+
+<div *ngIf="elementos">
+  <ul>
+   <li *ngFor="let elemento of elementos">{{elemento}}</li>
+  </ul>
+</div>
+<form action="">
+  
+  <input type="text" [(ngModel)]="elemento" placeholder="elemento" id="vElemento" name="vElemento">
+   <button (click)="addElemento(elemento)">Añadir</button>
+
+
+</form>
+<item [articulo]="elemento" *ngFor="let elemento of elementos" (evento)="borrarElemento(elemento)"></item>
+</div>
+  
