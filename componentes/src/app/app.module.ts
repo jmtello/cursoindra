@@ -1,3 +1,4 @@
+import { HijoComponent } from './hijo/hijo.component';
 import { CommonsModule } from './commons/commons.module';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,7 @@ import { IdeasComponent } from './ideas/ideas.component';
 import { MostrarComponent } from './mostrar/mostrar.component';
 import { FormulariosComponent } from './formularios/formularios.component';
 import { ValidFormComponent } from './valid-form/valid-form.component';
+import { PadreComponent } from './padre/padre.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ValidFormComponent } from './valid-form/valid-form.component';
     IdeasComponent,
     MostrarComponent,
     FormulariosComponent,
-    ValidFormComponent
+    ValidFormComponent,
+    PadreComponent,
+    HijoComponent
   ],
   imports: [
     BrowserModule,

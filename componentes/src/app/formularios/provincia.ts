@@ -7,8 +7,9 @@ export class Provincia {
     this.id = id;
     this.nombre = nombre;
   }
-  /*public print():string{
-    return "id="+this.id+". nombre="+this.nombre;
-  }*/
+  
+  // public print():string{
+  //   return "id="+this.id+". nombre="+this.nombre;
+  // }
 
 }

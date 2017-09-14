@@ -1,0 +1,5 @@
+<h2 *ngIf="mostrar">Titulo Padre</h2>
+  html padre appTitle={{appTitle}}
+  <hijo [titulo]='appTitle' (evento)="hiddenTitle($event)"></hijo>
+
+

@@ -9,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class ValidFormComponent implements OnInit {
 
   user: User;
+  message:string;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.user = new User('Perico', 'Palomares');
+    this.message = this.user.getFullName();
+    //this.user.firstName = 'Perico';
+    //this.user.secondName = 'Palomares';
+     
   }
 
 }
